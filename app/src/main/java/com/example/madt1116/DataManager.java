@@ -7,11 +7,11 @@ import java.net.URL;
 
 public class DataManager {
 
-    public static String getRateFromECB(String currencyCode) throws IOException {
+    public static String getRateFromECB() throws IOException {
         String rate = "Data were not retrieved";
         InputStream stream = downloadUrl(Constants.ECB_URL);
         try {
-            rate = XmlParser.getRateFromECB(stream, currencyCode);
+            rate = XmlParser.getRateFromECB(stream);
         }
         finally {
             if (stream != null) {

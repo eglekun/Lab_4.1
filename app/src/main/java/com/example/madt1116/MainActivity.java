@@ -32,6 +32,6 @@ public class MainActivity extends AppCompatActivity {
                 lvCurrencies = findViewById(R.id.lvCurrencies);
                 lvCurrencies.setAdapter(adapter);
             }
-        }.execute("USD");
+        }.execute();
     }
 }

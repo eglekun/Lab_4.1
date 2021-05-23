@@ -13,7 +13,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 public class XmlParser {
-    public static String getRateFromECB(InputStream stream, String currencyCode) throws IOException {
+    public static String getRateFromECB(InputStream stream) throws IOException {
         String result = "";
         try {
             DocumentBuilderFactory xmlDocFactory = DocumentBuilderFactory.newInstance();
