@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
             public void onPostExecute(String result)
             {
                 tvContent.setText(R.string.msgCurrencyList);
-                String[] arrayCurrencies = result.split(";");
+                String[] arrayCurrencies = result.split(String.valueOf(R.string.txtSplit));
                 ArrayAdapter<String> adapter = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_list_item_1, android.R.id.text1, arrayCurrencies);
                 lvCurrencies = findViewById(R.id.lvCurrencies);
                 lvCurrencies.setAdapter(adapter);
