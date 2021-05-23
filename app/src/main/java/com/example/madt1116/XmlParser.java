@@ -25,9 +25,8 @@ public class XmlParser {
                 Element cube = (Element) rateNodes.item(i);
                 if(cube.hasAttribute("currency")){
                     String currencyName = cube.getAttribute("currency");
-
+                    // change result format
                     result = result + currencyName + " - " + cube.getAttribute("rate") + ";";
-
                 }
             }
         } catch (ParserConfigurationException e) {
